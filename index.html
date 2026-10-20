@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solberg Interactive</title>
+<meta name="description" content="Solberg Interactive er et lite, uavhengig spillstudio. Vi lager Betrayal og The Balls.">
+<meta property="og:title" content="Solberg Interactive">
+<meta property="og:description" content="Spill tegnet for hånd. Bygget med presisjon.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400;1,9..144,600&family=Fredoka:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Shared logo, drawn as a construction drawing -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="arc-text" d="M106,300 A194,194 0 0 1 494,300"/>
+    <symbol id="logo" viewBox="40 40 520 356">
+      <g class="lg-line" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path class="lg-arch" d="M55,300 A245,245 0 0 1 545,300"/>
+        <path class="lg-arch" d="M125,300 A175,175 0 0 1 475,300"/>
+        <g class="lg-rays">
+          <path d="M240.6,291.6 C200.5,310.5 181.2,247.1 131.2,257.9"/>
+          <path d="M247.3,271.4 C203.2,275.0 207.3,208.9 156.6,201.4"/>
+          <path d="M260.6,254.7 C218.1,242.6 245.1,182.2 200.2,157.5"/>
+          <path d="M279.0,243.8 C243.4,217.6 289.8,170.4 256.4,131.5"/>
+          <path d="M300.0,240.0 C275.8,203.0 335.8,175.0 318.2,127.0"/>
+          <path d="M321.0,243.8 C311.3,200.6 377.3,195.5 377.6,144.3"/>
+          <path d="M339.4,254.7 C345.4,210.9 409.0,229.2 427.3,181.3"/>
+          <path d="M352.7,271.4 C373.7,232.4 426.9,271.9 460.8,233.4"/>
+          <path d="M359.4,291.6 C392.7,262.5 428.7,318.1 473.9,293.9"/>
+        </g>
+        <rect class="lg-arch" x="52" y="300" width="496" height="84" rx="14"/>
+      </g>
+      <path class="lg-sun" d="M248,300 A52,52 0 0 1 352,300 Z"/>
+      <text class="lg-type" font-size="46" letter-spacing="9"><textPath href="#arc-text" startOffset="50%" text-anchor="middle">SOLBERG</textPath></text>
+      <text class="lg-type" x="300" y="359" font-size="52" letter-spacing="6" text-anchor="middle">INTERACTIVE</text>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="sheet">
+  <!-- Registration marks in the page corners -->
+  <span class="reg reg-tl" aria-hidden="true"></span>
+  <span class="reg reg-tr" aria-hidden="true"></span>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Solberg Interactive, til toppen">
+      <svg class="brand-mark" viewBox="40 40 520 356" data-logo role="img" aria-label="Solberg Interactive"></svg>
+    </a>
+    <nav>
+      <a href="#katalog"><span>01</span>Katalog</a>
+      <a href="#metode"><span>02</span>Metode</a>
+      <a href="#kontakt"><span>03</span>Kontakt</a>
+    </nav>
+    <div class="coords mono" aria-hidden="true">X <b id="cx">0000</b> · Y <b id="cy">0000</b></div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-copy">
+      <p class="eyebrow mono"><span class="dot"></span> Uavhengig spillstudio · Tegning nr. SI-001</p>
+      <h1>Spill tegnet <em>for hånd.</em><br>Bygget med <span class="u">presisjon.</span></h1>
+      <p class="lede">Solberg Interactive lager spill vi selv vil spille, fra hjemsøkte hus i Godot til pikselmonstre i nettleseren. Hver idé starter på papir, og blir til noe du kan holde i hendene.</p>
+      <div class="cta">
+        <a class="btn" href="#katalog">Se katalogen <span aria-hidden="true">↓</span></a>
+        <a class="btn ghost" href="https://github.com/SolbergInteractives" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+
+    <figure class="plate" aria-label="Solberg Interactive-logoen som teknisk tegning">
+      <svg class="plate-svg" viewBox="0 0 640 520" role="img" aria-labelledby="plate-title">
+        <title id="plate-title">Solberg Interactive-logo med konstruksjonslinjer</title>
+        <!-- construction geometry, non-photo blue -->
+        <g class="cons" transform="translate(20,40)">
+          <line x1="0" y1="300" x2="600" y2="300"/>
+          <line x1="300" y1="20" x2="300" y2="430"/>
+          <circle cx="300" cy="300" r="245"/>
+          <circle cx="300" cy="300" r="175"/>
+          <circle cx="300" cy="300" r="52"/>
+          <circle class="faint" cx="300" cy="300" r="210"/>
+          <line class="faint" x1="300" y1="300" x2="88" y2="88"/>
+          <line class="faint" x1="300" y1="300" x2="512" y2="88"/>
+          <!-- radius dimension -->
+          <g class="dim">
+            <line x1="300" y1="300" x2="473" y2="127"/>
+            <path d="M466,128 L473,127 L472,134"/>
+            <text x="402" y="196" transform="rotate(-45 402 196)">R 245</text>
+          </g>
+          <g class="dim">
+            <line x1="55" y1="408" x2="545" y2="408"/>
+            <line x1="55" y1="398" x2="55" y2="418"/>
+            <line x1="545" y1="398" x2="545" y2="418"/>
+            <text x="300" y="426" text-anchor="middle">Ø 490 · BANNER 496 × 84</text>
+          </g>
+          <circle class="pin" cx="300" cy="300" r="3.5"/>
+        </g>
+        <g class="plate-logo" data-logo transform="translate(20,40)"></g>
+        <!-- callouts -->
+        <g class="callout" transform="translate(20,40)">
+          <circle cx="508" cy="160" r="7"/>
+          <path d="M514,154 L560,108 L610,108"/>
+          <text x="610" y="100" text-anchor="end">A — BUE, R 245</text>
+        </g>
+        <g class="callout" transform="translate(20,40)">
+          <circle cx="130" cy="160" r="7"/>
+          <path d="M124,154 L60,98 L0,98"/>
+          <text x="0" y="90">B — STRÅLER × 9</text>
+        </g>
+      </svg>
+      <figcaption class="mono">Fig. 1 — Merket, oppriss. Mål i px. Ikke skaler tegningen.</figcaption>
+    </figure>
+
+    <!-- Title block, like the corner of an engineering drawing -->
+    <dl class="titleblock mono" aria-label="Tegningshode">
+      <div><dt>Prosjekt</dt><dd>Solberg Interactive</dd></div>
+      <div><dt>Tegn. nr.</dt><dd>SI-001</dd></div>
+      <div><dt>Målestokk</dt><dd>1 : 1</dd></div>
+      <div><dt>Ark</dt><dd>1 / 1</dd></div>
+      <div><dt>Rev.</dt><dd id="rev">A</dd></div>
+    </dl>
+  </section>
+
+  <!-- Marquee -->
+  <div class="tape mono" aria-hidden="true">
+    <div class="tape-track">
+      <span>GODOT 4.7</span><i>✦</i><span>GDSCRIPT</span><i>✦</i><span>TYPESCRIPT</span><i>✦</i><span>MULTIPLAYER OVER LAN &amp; STEAM</span><i>✦</i><span>PIKSELKUNST</span><i>✦</i><span>HÅNDTEGNET · MASKINTESTET</span><i>✦</i>
+      <span>GODOT 4.7</span><i>✦</i><span>GDSCRIPT</span><i>✦</i><span>TYPESCRIPT</span><i>✦</i><span>MULTIPLAYER OVER LAN &amp; STEAM</span><i>✦</i><span>PIKSELKUNST</span><i>✦</i><span>HÅNDTEGNET · MASKINTESTET</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- CATALOG -->
+  <section class="section" id="katalog">
+    <header class="sec-head">
+      <p class="mono sec-no">§ 01</p>
+      <h2>Katalogen</h2>
+      <p class="sec-sub">To spill på tegnebordet. Hvert med sitt eget datablad.</p>
+    </header>
+
+    <!-- Betrayal -->
+    <article class="game reveal" id="betrayal">
+      <div class="game-fig fig-betrayal">
+        <svg viewBox="0 0 560 420" role="img" aria-labelledby="bt-t">
+          <title id="bt-t">Plantegning av et hjemsøkt hus, rom for rom</title>
+          <defs>
+            <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+              <line x1="0" y1="0" x2="0" y2="8" class="hatch"/>
+            </pattern>
+          </defs>
+          <g class="grid">
+            <!-- 20px grid -->
+          </g>
+          <g class="plan" transform="translate(-24,30)">
+            <rect class="room solid" x="200" y="240" width="80" height="80"/>
+            <rect class="room solid" x="280" y="240" width="80" height="80"/>
+            <rect class="room solid" x="200" y="160" width="80" height="80"/>
+            <rect class="room solid" x="120" y="160" width="80" height="80"/>
+            <rect class="room solid" x="200" y="80" width="80" height="80"/>
+            <rect class="room solid stairs" x="360" y="240" width="80" height="80"/>
+            <rect class="room solid" x="120" y="80" width="80" height="80" fill="url(#hatch)"/>
+            <rect class="room fog" x="280" y="160" width="80" height="80"/>
+            <rect class="room fog" x="40" y="160" width="80" height="80"/>
+            <rect class="room fog" x="280" y="80" width="80" height="80"/>
+            <rect class="room fog" x="200" y="0" width="80" height="80"/>
+            <!-- doors -->
+            <g class="door"><line x1="228" y1="240" x2="252" y2="240"/><line x1="280" y1="268" x2="280" y2="292"/><line x1="200" y1="188" x2="200" y2="212"/><line x1="228" y1="160" x2="252" y2="160"/><line x1="360" y1="268" x2="360" y2="292"/><line x1="148" y1="160" x2="172" y2="160"/></g>
+            <!-- stairs -->
+            <g class="steps"><line x1="376" y1="252" x2="376" y2="308"/><line x1="392" y1="252" x2="392" y2="308"/><line x1="408" y1="252" x2="408" y2="308"/><line x1="424" y1="252" x2="424" y2="308"/></g>
+            <text class="q" x="320" y="208">?</text>
+            <text class="q" x="80" y="208">?</text>
+            <text class="q" x="320" y="128">?</text>
+            <text class="q" x="240" y="48">?</text>
+            <text class="rl" x="240" y="336">INNGANG</text>
+            <text class="rl" x="400" y="336">TRAPP ▲</text>
+            <!-- players -->
+            <circle class="pl" cx="226" cy="192" r="7"/>
+            <circle class="pl" cx="252" cy="214" r="7"/>
+            <circle class="pl" cx="160" cy="118" r="7"/>
+            <circle class="pl traitor" cx="240" cy="116" r="8"/>
+            <path class="trail" d="M240,300 L240,200 L160,200 L160,118"/>
+          </g>
+          <g class="dim" transform="translate(-24,20)">
+            <line x1="200" y1="370" x2="280" y2="370"/><line x1="200" y1="362" x2="200" y2="378"/><line x1="280" y1="362" x2="280" y2="378"/>
+            <text x="240" y="392" text-anchor="middle">1 ROM</text>
+          </g>
+          <image href="assets/betrayal-logo.svg" x="370" y="22" width="166" height="39"/>
+          <text class="note" x="372" y="84">1. ETASJE</text>
+          <text class="note" x="372" y="100">UTFORSKET 7 / 11 ROM</text>
+          <text class="note red" x="372" y="122">◉ ÉN ER FORRÆDER</text>
+        </svg>
+        <span class="figlabel mono">Fig. 2 — Huset, plan 1</span>
+      </div>
+
+      <div class="game-body">
+        <p class="mono cat-no">Kat. nr. 001 <span class="stamp">I utvikling</span></p>
+        <h3>Betrayal</h3>
+        <p class="game-lede">Et multiplayer 3D-spill om et hus som våkner. Dere utforsker sammen, rom for rom, med terninger, kort og en stadig verre følelse, helt til hjemsøkelsen starter og én av dere blir forræderen.</p>
+        <dl class="spec mono">
+          <div><dt>Motor</dt><dd>Godot 4.7 · GDScript</dd></div>
+          <div><dt>Spillere</dt><dd>Online over LAN og Steam, eller med bots</dd></div>
+          <div><dt>Kamera</dt><dd>1. person, 3. person, isometrisk</dd></div>
+          <div><dt>Inspirasjon</dt><dd><i>Betrayal at House on the Hill</i></dd></div>
+          <div><dt>Status</dt><dd>Aktiv utvikling</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <!-- The Balls -->
+    <article class="game flip reveal" id="the-balls">
+      <div class="game-fig fig-balls">
+        <div class="shot">
+          <img src="assets/the-balls-cover.png" alt="The Balls: pikselmonstre, glødende baller og en blå heltinne" width="1920" height="1080" loading="lazy">
+          <svg class="overlay" viewBox="0 0 1920 1080" aria-hidden="true">
+            <path class="traj" d="M960,1000 Q620,260 260,180"/>
+            <path class="traj" d="M960,1000 Q1250,300 1640,620"/>
+            <path class="ang" d="M960,880 A120,120 0 0 0 906,900"/>
+            <line class="axis" x1="960" y1="1060" x2="960" y2="760"/>
+            <text x="760" y="860">θ 24°</text>
+            <circle class="hit" cx="260" cy="180" r="90"/>
+            <text x="370" y="150">MÅL A</text>
+            <circle class="hit" cx="1640" cy="620" r="90"/>
+            <text x="1480" y="780">MÅL B</text>
+          </svg>
+        </div>
+        <span class="figlabel mono">Fig. 3 — Ballbane, ikke i skala</span>
+      </div>
+
+      <div class="game-body">
+        <p class="mono cat-no">Kat. nr. 002 <span class="stamp ok">Spillbar</span></p>
+        <h3 class="balls-title">The Balls</h3>
+        <p class="game-lede">En pikselkunst-arkade i nettleseren. Sikt, skyt og knus pikselmonstre. Gjør spesialballene sterkere, smelt dem sammen og slå bossene.</p>
+        <dl class="spec mono">
+          <div><dt>Sjanger</dt><dd>Arkade · ball shooter</dd></div>
+          <div><dt>Plattform</dt><dd>Nettleser, desktop og mobil</dd></div>
+          <div><dt>Teknikk</dt><dd>TypeScript · Vite</dd></div>
+          <div><dt>Mekanikk</dt><dd>Sikt · skyt · oppgrader · smelt sammen</dd></div>
+          <div><dt>Status</dt><dd>Spillbar i dag</dd></div>
+        </dl>
+        <a class="btn" href="https://ball-blast-redux.lovable.app" target="_blank" rel="noopener">Spill nå <span aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+  </section>
+
+  <!-- METHOD -->
+  <section class="section" id="metode">
+    <header class="sec-head">
+      <p class="mono sec-no">§ 02</p>
+      <h2>Metode</h2>
+      <p class="sec-sub">Tre trinn, gjentatt til det sitter.</p>
+    </header>
+
+    <ol class="steps-grid">
+      <li class="step reveal">
+        <svg viewBox="0 0 200 140" aria-hidden="true">
+          <rect class="paper" x="30" y="18" width="120" height="100" rx="3" transform="rotate(-4 90 68)"/>
+          <path class="ink" d="M52,52 C70,40 92,64 112,48 M52,72 L128,72 M52,88 L104,88"/>
+          <path class="pencil" d="M140,104 L176,40 L186,46 L150,110 Z M140,104 L146,114"/>
+        </svg>
+        <p class="mono step-no">Fig. A</p>
+        <h3>Skisse</h3>
+        <p>Regler, rom og følelser tegnes først på papir. Hvis ideen ikke overlever en blyant, overlever den ikke en motor.</p>
+      </li>
+      <li class="step reveal">
+        <svg viewBox="0 0 200 140" aria-hidden="true">
+          <g class="iso">
+            <path class="ink" d="M100,30 L150,55 L100,80 L50,55 Z"/>
+            <path class="ink" d="M50,55 L50,95 L100,120 L100,80 M150,55 L150,95 L100,120"/>
+          </g>
+          <circle class="pencil-dot" cx="100" cy="55" r="6"/>
+          <path class="cons-line" d="M20,55 L180,55 M100,10 L100,130"/>
+        </svg>
+        <p class="mono step-no">Fig. B</p>
+        <h3>Prototype</h3>
+        <p>Spillbart så tidlig som mulig. Grå bokser, bots som spiller mot hverandre, og ærlige testkvelder.</p>
+      </li>
+      <li class="step reveal">
+        <svg viewBox="0 0 200 140" aria-hidden="true">
+          <rect class="ink" x="24" y="24" width="72" height="92" rx="2"/>
+          <rect class="ink fillish" x="104" y="24" width="72" height="92" rx="2"/>
+          <line class="red-line" x1="100" y1="12" x2="100" y2="128"/>
+          <circle class="red-knob" cx="100" cy="70" r="8"/>
+          <text class="tiny" x="60" y="134" text-anchor="middle">FØR</text>
+          <text class="tiny" x="140" y="134" text-anchor="middle">ETTER</text>
+        </svg>
+        <p class="mono step-no">Fig. C</p>
+        <h3>Finpuss</h3>
+        <p>Lys, lyd og de små detaljene. Hver endring får et før og etter-bilde, så vi ser at den faktisk ble bedre.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <footer class="section foot" id="kontakt">
+    <header class="sec-head">
+      <p class="mono sec-no">§ 03</p>
+      <h2>Kontakt</h2>
+    </header>
+    <div class="foot-grid">
+      <p class="foot-big">Vil du følge med, teste eller samarbeide? Finn studioet på GitHub.</p>
+      <a class="foot-link" href="https://github.com/SolbergInteractives" target="_blank" rel="noopener">
+        <span class="mono">github.com/</span>SolbergInteractives <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+    <dl class="titleblock wide mono">
+      <div><dt>Utgiver</dt><dd>Solberg Interactive</dd></div>
+      <div><dt>Tegnet av</dt><dd>M. Fuglset</dd></div>
+      <div><dt>Kontrollert</dt><dd>Spilltestere</dd></div>
+      <div><dt>Dato</dt><dd id="year">2026</dd></div>
+      <div><dt>Tegn. nr.</dt><dd>SI-001 · Ark 1/1</dd></div>
+    </dl>
+    <p class="fine mono">© <span id="year2">2026</span> Solberg Interactive. Alle navn, rom og kort i spillene er egne.</p>
+  </footer>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
